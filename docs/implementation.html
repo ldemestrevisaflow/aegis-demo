@@ -1,1 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Implementation - AEGIS Framework</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body class="bg-base-100">
+  <!-- Navigation -->
+  <div class="navbar bg-base-200 shadow-lg sticky top-0 z-50">
+    <div class="flex-1">
+      <a href="index.html" class="btn btn-ghost text-xl">
+        <span class="text-primary">AEGIS</span>
+      </a>
+    </div>
+    <div class="flex-none">
+      <ul class="menu menu-horizontal px-1">
+        <li><a href="framework.html">Framework</a></li>
+        <li><a href="sandbox.html">Sandbox</a></li>
+        <li><a href="technical.html">Technical</a></li>
+        <li><a href="implementation.html" class="active">Deploy</a></li>
+      </ul>
+    </div>
+  </div>
 
+  <!-- Hero Section -->
+  <div class="hero min-h-[40vh] bg-gradient-to-br from-base-100 to-base-300">
+    <div class="hero-content text-center">
+      <div class="max-w-3xl">
+        <h1 class="text-5xl font-bold text-primary mb-4">Implementation Guide</h1>
+        <p class="text-xl opacity-80">Deploy AEGIS to GitHub Pages in minutes</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 py-12 max-w-5xl">
+    
+    <!-- Quick Start -->
+    <div class="card bg-base-200 shadow-xl mb-8">
+      <div class="card-body">
+        <h2 class="card-title text-3xl text-primary mb-4">🚀 Quick Start</h2>
+        <div class="space-y-4">
+          <div class="alert alert-info">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <span>This demo is designed to run as a static site on GitHub Pages. No backend required!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 1: Setup Repository -->
+    <div class="card bg-base-200 shadow-xl mb-8">
+      <div class="card-body">
+        <h2 class="card-title text-2xl mb-4">📦 Step 1: Create Repository</h2>
+        <div class="steps steps-vertical lg:steps-horizontal mb-6">
+          <div class="step step-primary">Create repo</div>
+          <div class="step step-primary">Clone locally</div>
+          <div class="step step-primary">Add files</div>
+          <div class="step step-primary">Push to GitHub</div>
+        </div>
+        
+        <div class="mockup-code mb-4">
+          <pre data-prefix="$"><code>mkdir aegis-demo</code></pre>
+          <pre data-prefix="$"><code>cd aegis-demo</code></pre>
+          <pre data-prefix="$"><code>git init</code></pre>
+          <pre data-prefix="$"><code>git branch -M main</code></pre>
+        </div>
+
+        <div class="collapse collapse-arrow bg-base-300">
+          <input type="checkbox" /> 
+          <div class="collapse-title text-lg font-medium">
+            View complete folder structure
+          </div>
+          <div class="collapse-content"> 
+            <div class="mockup-code">
+              <pre><code>aegis-demo/
+├── docs/
+│   ├── index.html
+│   ├── framework.html
+│   ├── sandbox.html
+│   ├── technical.html
+│   ├── implementation.html
+│   └── assets/
+│       ├── css/
+│       │   └── custom.css
+│       └── js/
+│           └── app.js
+├── README.md
+└── .gitignore</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 2: Add Files -->
+    <div class="card bg-base-200 shadow-xl mb-8">
+      <div class="card-body">
+        <h2 class="card-title text-2xl mb-4">📝 Step 2: Add Your Files</h2>
+        <p class="mb-4">Copy all your HTML, CSS, and JavaScript files into the appropriate folders as shown in the structure above.</p>
+        
+        <div class="mockup-code mb-4">
+          <pre data-prefix="$"><code>git add .</code></pre>
+          <pre data-prefix="$"><code>git commit -m "Initial AEGIS demo deployment"</code></pre>
+          <pre data-prefix="$"><code>git remote add origin https://github.com/YOUR_USERNAME/aegis-demo.git</code></pre>
+          <pre data-prefix="$"><code>git push -u origin main</code></pre>
+        </div>
+
+        <div class="alert alert-warning">
+          <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+          <span>Don't forget to replace YOUR_USERNAME with your actual GitHub username!</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 3: Enable GitHub Pages -->
+    <div class="card bg-base-200 shadow-xl mb-8">
+      <div class="card-body">
+        <h2 class="card-title text-2xl mb-4">🌐 Step 3: Enable GitHub Pages</h2>
+        
+        <div class="space-y-4">
+          <div class="alert">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <div>
+              <h3 class="font-bold">Go to your repository on GitHub</h3>
+              <div class="text-xs">Navigate to: Settings → Pages</div>
+            </div>
+          </div>
+
+          <ol class="list-decimal list-inside space-y-3 ml-4">
+            <li class="text-lg">Click on <strong>Settings</strong> tab in your repository</li>
+            <li class="text-lg">Navigate to <strong>Pages</strong> in the left sidebar</li>
+            <li class="text-lg">Under "Source", select:
+              <ul class="list-disc list-inside ml-6 mt-2 space-y-1">
+                <li>Branch: <span class="badge badge-primary">main</span></li>
+                <li>Folder: <span class="badge badge-secondary">/docs</span></li>
+              </ul>
+            </li>
+            <li class="text-lg">Click <strong>Save</strong></li>
+            <li class="text-lg">Wait 2-3 minutes for deployment</li>
+          </ol>
+
+          <div class="alert alert-success mt-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            <div>
+              <h3 class="font-bold">Your site will be live at:</h3>
+              <div class="text-sm font-mono">https://YOUR_USERNAME.github.io/aegis-demo/</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Technical Stack -->
+    <div class="card bg-base-200 shadow-xl mb-8">
+      <div class="card-body">
+        <h2 class="card-title text-2xl mb-4">🛠️ Technical Stack</h2>
+        
+        <div class="overflow-x-auto">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Component</th>
+                <th>Technology</th>
+                <th>Purpose</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Frontend</strong></td>
+                <td>HTML5, Tailwind CSS, DaisyUI</td>
+                <td>User interface and styling</td>
+              </tr>
+              <tr>
+                <td><strong>Blockchain</strong></td>
+                <td>Hyperledger Fabric 2.5+</td>
+                <td>Immutable audit trail (production)</td>
+              </tr>
+              <tr>
+                <td><strong>Infrastructure</strong></td>
+                <td>Kubernetes, Istio</td>
+                <td>Container orchestration (production)</td>
+              </tr>
+              <tr>
+                <td><strong>Compliance</strong></td>
+                <td>PwC Pathfinder API</td>
+                <td>Regulatory mapping (production)</td>
+              </tr>
+              <tr>
+                <td><strong>Monitoring</strong></td>
+                <td>Prometheus + Grafana</td>
+                <td>Metrics and visualization (production)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="alert alert-warning mt-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+          <span><strong>Note:</strong> This demo is a frontend-only implementation. Backend features require additional setup.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive Features -->
+    <div class="card bg-base-200 shadow-xl mb-8">
+      <div class="card-body">
+        <h2 class="card-title text-2xl mb-4">✨ Interactive Features</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="card bg-base-300">
+            <div class="card-body">
+              <h3 class="card-title text-lg text-success">✓ Working in Demo</h3>
+              <ul class="list-disc list-inside space-y-1 text-sm">
+                <li>Smooth scrolling navigation</li>
+                <li>Card animations on scroll</li>
+                <li>Collapsible sections</li>
+                <li>Tab switching</li>
+                <li>Copy-to-clipboard buttons</li>
+                <li>SVG hover effects</li>
+                <li>Button ripple animations</li>
+                <li>Scroll progress bar</li>
+                <li>Responsive design</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card bg-base-300">
+            <div class="card-body">
+              <h3 class="card-title text-lg text-warning">⚠ Requires Backend</h3>
+              <ul class="list-disc list-inside space-y-1 text-sm">
+                <li>Live risk calculator</li>
+                <li>Blockchain transaction simulator</li>
+                <li>Interactive kill switch demo</li>
+                <li>Real-time compliance checker</li>
+                <li>Action validator playground</li>
+                <li>API integration examples</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Troubleshooting -->
+    <div class="card bg-base-200 shadow-xl mb-8">
+      <div class="card-body">
+        <h2 class="card-title text-2xl mb-4">🔧 Troubleshooting</h2>
+        
+        <div class="join join-vertical w-full">
+          <div class="collapse collapse-arrow join-item border border-base-300">
+            <input type="radio" name="troubleshooting-accordion" checked="checked" /> 
+            <div class="collapse-title text-lg font-medium">
+              Site not loading after deployment
+            </div>
+            <div class="collapse-content"> 
+              <p class="mb-2">Try these steps:</p>
+              <ul class="list-disc list-inside space-y-1">
+                <li>Wait 3-5 minutes for initial deployment</li>
+                <li>Clear your browser cache</li>
+                <li>Check that /docs folder is selected in GitHub Pages settings</li>
+                <li>Verify index.html exists in the /docs folder</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="collapse collapse-arrow join-item border border-base-300">
+            <input type="radio" name="troubleshooting-accordion" /> 
+            <div class="collapse-title text-lg font-medium">
+              Buttons not working
+            </div>
+            <div class="collapse-content"> 
+              <p class="mb-2">Common causes:</p>
+              <ul class="list-disc list-inside space-y-1">
+                <li>JavaScript file (app.js) not loading properly</li>
+                <li>Linked HTML pages don't exist (404 errors)</li>
+                <li>Check browser console for errors (F12)</li>
+                <li>Verify all file paths are correct</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="collapse collapse-arrow join-item border border-base-300">
+            <input type="radio" name="troubleshooting-accordion" /> 
+            <div class="collapse-title text-lg font-medium">
+              Styling looks broken
+            </div>
+            <div class="collapse-content"> 
+              <p class="mb-2">Check these items:</p>
+              <ul class="list-disc list-inside space-y-1">
+                <li>Verify Tailwind CSS and DaisyUI CDN links are correct</li>
+                <li>Check that custom.css path is correct</li>
+                <li>Ensure data-theme="dark" is set on html tag</li>
+                <li>Clear browser cache and hard refresh (Ctrl+Shift+R)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Next Steps -->
+    <div class="card bg-gradient-to-br from-primary to-secondary text-primary-content shadow-xl mb-8">
+      <div class="card-body">
+        <h2 class="card-title text-2xl mb-4">🎯 Next Steps</h2>
+        <div class="space-y-3">
+          <p class="text-lg">Ready to extend AEGIS? Consider:</p>
+          <ul class="list-disc list-inside space-y-2 text-base">
+            <li>Adding backend API for real-time features</li>
+            <li>Integrating with actual blockchain networks</li>
+            <li>Connecting to PwC Pathfinder API</li>
+            <li>Building custom compliance modules</li>
+            <li>Implementing authentication and user management</li>
+          </ul>
+        </div>
+        <div class="card-actions justify-end mt-4">
+          <a href="technical.html" class="btn btn-ghost">View Technical Specs →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Support -->
+    <div class="card bg-base-200 shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title text-2xl mb-4">💬 Support</h2>
+        <p class="mb-4">Need help with your AEGIS implementation?</p>
+        <div class="flex gap-3 flex-wrap">
+          <a href="https://github.com/ldemestrevisaflow/aegis-demo/issues" class="btn btn-outline btn-primary" target="_blank">
+            Report an Issue
+          </a>
+          <a href="index.html" class="btn btn-outline btn-secondary">
+            Back to Home
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer footer-center p-10 bg-base-200 mt-12">
+    <div>
+      <p class="font-bold text-lg">AEGIS Framework</p> 
+      <p>AI Ethics, Governance & Integrity System</p>
+      <p class="text-sm opacity-60">Built for responsible AI deployment</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
