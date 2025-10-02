@@ -1,1 +1,183 @@
+/* AEGIS Custom Styles */
+
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Smooth transitions */
+* {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: oklch(var(--b2));
+}
+
+::-webkit-scrollbar-thumb {
+  background: oklch(var(--p) / 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(var(--p));
+}
+
+/* Code blocks */
+.mockup-code {
+  background: oklch(var(--b3));
+}
+
+.mockup-code pre {
+  padding: 1rem;
+}
+
+/* Cards hover effect */
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px -10px oklch(var(--p) / 0.3);
+}
+
+/* Navbar */
+.navbar {
+  backdrop-filter: blur(10px);
+  background: oklch(var(--b2) / 0.95);
+}
+
+/* Active menu item */
+.menu li a.active {
+  background: oklch(var(--p) / 0.2);
+  color: oklch(var(--pc));
+}
+
+/* Hero gradient */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Alert animations */
+.alert {
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Badge pulse animation */
+.badge-primary {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 oklch(var(--p) / 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 10px oklch(var(--p) / 0);
+  }
+}
+
+/* SVG animations */
+svg text {
+  text-rendering: optimizeLegibility;
+}
+
+svg rect, svg circle {
+  transition: all 0.3s ease;
+}
+
+svg rect:hover, svg circle:hover {
+  filter: brightness(1.2);
+}
+
+/* Collapse animations */
+.collapse-content {
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+/* Tab transitions */
+.tab {
+  transition: all 0.2s ease;
+}
+
+.tab-active {
+  font-weight: 600;
+}
+
+/* Button effects */
+.btn {
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px -5px oklch(var(--p) / 0.5);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Loading state */
+.skeleton {
+  animation: skeleton-loading 1.5s ease-in-out infinite;
+}
+
+@keyframes skeleton-loading {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  .hero-content {
+    padding: 2rem 1rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .navbar,
+  .footer,
+  .btn {
+    display: none;
+  }
+  
+  .card {
+    break-inside: avoid;
+  }
 
