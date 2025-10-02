@@ -1,101 +1,322 @@
-AEGIS - AI Governance Framework
-Autonomous Entity Governance & Intervention System
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technical Specifications - AEGIS Framework</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body class="bg-base-100">
+  <!-- Navigation -->
+  <div class="navbar bg-base-200 shadow-lg sticky top-0 z-50">
+    <div class="flex-1">
+      <a href="index.html" class="btn btn-ghost text-xl">
+        <span class="text-primary">AEGIS</span>
+      </a>
+    </div>
+    <div class="flex-none">
+      <ul class="menu menu-horizontal px-1">
+        <li><a href="framework.html">Framework</a></li>
+        <li><a href="sandbox.html">Sandbox</a></li>
+        <li><a href="technical.html" class="active">Technical</a></li>
+        <li><a href="implementation.html">Deploy</a></li>
+      </ul>
+    </div>
+  </div>
 
-A comprehensive framework for responsible AI development and deployment with real-time monitoring, blockchain-based audit trails, human kill switch mechanisms, and global regulatory compliance.
+  <!-- Hero Section -->
+  <div class="hero min-h-[40vh] bg-gradient-to-br from-base-100 to-base-300">
+    <div class="hero-content text-center">
+      <div class="max-w-4xl">
+        <h1 class="text-5xl font-bold text-primary mb-4">Technical Specifications</h1>
+        <p class="text-xl opacity-80 mb-6">Comprehensive framework for responsible AI development and deployment</p>
+        <p class="text-lg opacity-70">Real-time monitoring, blockchain-based audit trails, human kill switch mechanisms, and global regulatory compliance</p>
+      </div>
+    </div>
+  </div>
 
-🚀 Live Demo
-Visit the live demo: https://YOUR_USERNAME.github.io/aegis-demo/
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 py-12 max-w-6xl">
+    
+    <!-- Live Demo Section -->
+    <div class="alert alert-info mb-8">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+      <div>
+        <h3 class="font-bold">🌟 Live Demo</h3>
+        <p>Visit the live demo: <a href="https://ldemestrevisaflow.github.io/aegis-demo/" class="link link-primary">https://ldemestrevisaflow.github.io/aegis-demo/</a></p>
+      </div>
+    </div>
 
-📋 Overview
-AEGIS provides two implementation approaches:
+    <!-- Overview Section -->
+    <div class="card bg-base-200 shadow-xl mb-8">
+      <div class="card-body">
+        <h2 class="card-title text-3xl text-primary mb-4">📋 Overview</h2>
+        <p class="text-lg mb-4">AEGIS provides two implementation approaches:</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="card bg-base-300">
+            <div class="card-body">
+              <h3 class="card-title text-lg">🏛️ Governance Framework (Approach A)</h3>
+              <p class="text-sm">Monitor and control existing AI systems through an oversight layer</p>
+            </div>
+          </div>
+          <div class="card bg-base-300">
+            <div class="card-body">
+              <h3 class="card-title text-lg">🔒 Controlled Sandbox (Approach B)</h3>
+              <p class="text-sm">Create a constrained execution environment where non-compliant actions are architecturally impossible</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-Governance Framework (Approach A): Monitor and control existing AI systems through an oversight layer
-Controlled Sandbox (Approach B): Create a constrained execution environment where non-compliant actions are architecturally impossible
-🎯 Core Features
-⛓️ Blockchain Layer: Immutable audit trail of all AI decisions using Hyperledger Fabric
-🔴 Kill Switch: Immediate agent suspension via human oversight committee with multi-sig approval
-🧭 PwC Pathfinder Integration: Real-time regulatory mapping and compliance verification
-🌍 Global Compliance: EU AI Act, US Executive Order, UK Framework, China regulations
-📊 Risk Engine: Real-time risk scoring (0-100) and threshold monitoring
-👥 Human-in-the-Loop: Oversight committee with escalation protocols
-🏗️ Repository Structure
-aegis-demo/
+    <!-- Core Features -->
+    <div class="card bg-base-200 shadow-xl mb-8">
+      <div class="card-body">
+        <h2 class="card-title text-3xl text-primary mb-4">🛡️ Core Features</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="card bg-base-300">
+            <div class="card-body">
+              <h3 class="card-title text-lg">⛓️ Blockchain Layer</h3>
+              <p class="text-sm">Immutable audit trail of all AI decisions using Hyperledger Fabric</p>
+            </div>
+          </div>
+          
+          <div class="card bg-base-300">
+            <div class="card-body">
+              <h3 class="card-title text-lg">🔴 Kill Switch</h3>
+              <p class="text-sm">Immediate agent suspension via human oversight committee with multi-sig approval</p>
+            </div>
+          </div>
+          
+          <div class="card bg-base-300">
+            <div class="card-body">
+              <h3 class="card-title text-lg">🧭 PwC Pathfinder Integration</h3>
+              <p class="text-sm">Real-time regulatory mapping and compliance verification</p>
+            </div>
+          </div>
+          
+          <div class="card bg-base-300">
+            <div class="card-body">
+              <h3 class="card-title text-lg">🌍 Global Compliance</h3>
+              <p class="text-sm">EU AI Act, US Executive Order, UK Framework, China regulations</p>
+            </div>
+          </div>
+          
+          <div class="card bg-base-300">
+            <div class="card-body">
+              <h3 class="card-title text-lg">📊 Risk Engine</h3>
+              <p class="text-sm">Real-time risk scoring (0-100) and threshold monitoring</p>
+            </div>
+          </div>
+          
+          <div class="card bg-base-300">
+            <div class="card-body">
+              <h3 class="card-title text-lg">👥 Human-in-the-Loop</h3>
+              <p class="text-sm">Oversight committee with escalation protocols</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Repository Structure -->
+    <div class="card bg-base-200 shadow-xl mb-8">
+      <div class="card-body">
+        <h2 class="card-title text-3xl text-primary mb-4">📁 Repository Structure</h2>
+        
+        <div class="mockup-code">
+          <pre><code>aegis-demo/
 ├── docs/
-│   ├── index.html              # Homepage
-│   ├── framework.html          # Governance framework details
-│   ├── sandbox.html            # Sandbox architecture
-│   ├── technical.html          # Technical specifications
-│   ├── implementation.html     # Implementation guide
+│   ├── index.html                    # Homepage
+│   ├── framework.html                # Governance framework details
+│   ├── sandbox.html                  # Sandbox architecture
+│   ├── technical.html                # Technical specifications
+│   ├── implementation.html           # Implementation guide
 │   └── assets/
 │       ├── css/
-│       │   └── custom.css      # Custom styling
+│       │   └── custom.css           # Custom styling
 │       └── js/
-│           └── app.js          # Interactive features
+│           └── app.js               # Interactive features
 ├── README.md
-└── .gitignore
-🛠️ Technology Stack
-Frontend: HTML5, Tailwind CSS, DaisyUI
-Blockchain: Hyperledger Fabric 2.5+
-Infrastructure: Kubernetes, Istio service mesh
-Compliance: PwC Pathfinder API integration
-Monitoring: Prometheus + Grafana
-📦 Deployment to GitHub Pages
-1. Create Repository
-mkdir aegis-demo
-cd aegis-demo
-git init
-git branch -M main
-2. Add Files
-Copy all files from the code tabs into the correct folders:
+└── .gitignore</code></pre>
+        </div>
+      </div>
+    </div>
 
-docs/index.html
-docs/framework.html
-docs/assets/css/custom.css
-docs/assets/js/app.js
-README.md
-3. Push to GitHub
-git add .
-git commit -m "Initial AEGIS demo deployment"
-git remote add origin https://github.com/YOUR_USERNAME/aegis-demo.git
-git push -u origin main
-4. Enable GitHub Pages
-Go to repository Settings
-Navigate to Pages section
-Select Source: main branch
-Select Folder: /docs
-Click Save
-Wait 2-3 minutes and your site will be live!
+    <!-- Technology Stack -->
+    <div class="card bg-base-200 shadow-xl mb-8">
+      <div class="card-body">
+        <h2 class="card-title text-3xl text-primary mb-4">🛠️ Technology Stack</h2>
+        
+        <div class="overflow-x-auto">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Layer</th>
+                <th>Technology</th>
+                <th>Purpose</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Frontend</strong></td>
+                <td>HTML5, Tailwind CSS, DaisyUI</td>
+                <td>User interface and styling</td>
+                <td><span class="badge badge-success">✓ Active</span></td>
+              </tr>
+              <tr>
+                <td><strong>Blockchain</strong></td>
+                <td>Hyperledger Fabric 2.5+</td>
+                <td>Immutable audit trail</td>
+                <td><span class="badge badge-warning">Production</span></td>
+              </tr>
+              <tr>
+                <td><strong>Infrastructure</strong></td>
+                <td>Kubernetes, Istio service mesh</td>
+                <td>Container orchestration</td>
+                <td><span class="badge badge-warning">Production</span></td>
+              </tr>
+              <tr>
+                <td><strong>Compliance</strong></td>
+                <td>PwC Pathfinder API integration</td>
+                <td>Regulatory mapping</td>
+                <td><span class="badge badge-warning">Production</span></td>
+              </tr>
+              <tr>
+                <td><strong>Monitoring</strong></td>
+                <td>Prometheus + Grafana</td>
+                <td>Metrics and visualization</td>
+                <td><span class="badge badge-warning">Production</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
 
-🎨 Interactive Features
-The demo includes working interactive elements:
+    <!-- Interactive Features -->
+    <div class="card bg-base-200 shadow-xl mb-8">
+      <div class="card-body">
+        <h2 class="card-title text-3xl text-primary mb-4">✨ Interactive Features</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="card bg-base-300">
+            <div class="card-body">
+              <h3 class="card-title text-lg text-success">✓ Currently Working</h3>
+              <ul class="list-disc list-inside space-y-1 text-sm">
+                <li>Smooth scrolling navigation</li>
+                <li>Card animations on scroll</li>
+                <li>Collapsible sections</li>
+                <li>Tab switching</li>
+                <li>Copy-to-clipboard buttons</li>
+                <li>SVG hover effects</li>
+                <li>Button ripple animations</li>
+                <li>Scroll progress bar</li>
+                <li>Responsive design</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-base-300">
+            <div class="card-body">
+              <h3 class="card-title text-lg text-warning">⚠ Future Enhancements</h3>
+              <p class="text-sm mb-2">(requires backend):</p>
+              <ul class="list-disc list-inside space-y-1 text-sm">
+                <li>Live risk calculator</li>
+                <li>Blockchain transaction simulator</li>
+                <li>Interactive kill switch demo</li>
+                <li>Real-time compliance checker</li>
+                <li>Action validator playground</li>
+                <li>API integration examples</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-✓ Smooth scrolling navigation
-✓ Card animations on scroll
-✓ Collapsible sections
-✓ Tab switching
-✓ Copy-to-clipboard buttons
-✓ SVG hover effects
-✓ Button ripple animations
-✓ Scroll progress bar
-✓ Responsive design
-🔧 Phase 2: Adding Functions
-Future enhancements (requires backend):
+    <!-- Phase 2 Features -->
+    <div class="card bg-gradient-to-br from-secondary to-accent text-secondary-content shadow-xl mb-8">
+      <div class="card-body">
+        <h2 class="card-title text-3xl mb-4">🚀 Phase 2: Advanced Functions</h2>
+        <p class="text-lg mb-4">Future enhancements (requires backend):</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <h4 class="font-bold mb-2">Risk Management:</h4>
+            <ul class="list-disc list-inside space-y-1 text-sm">
+              <li>Live risk calculator</li>
+              <li>Blockchain transaction simulator</li>
+              <li>Interactive kill switch demo</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold mb-2">Compliance Tools:</h4>
+            <ul class="list-disc list-inside space-y-1 text-sm">
+              <li>Real-time compliance checker</li>
+              <li>Action validator playground</li>
+              <li>API integration examples</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
 
-Live risk calculator
-Blockchain transaction simulator
-Interactive kill switch demo
-Real-time compliance checker
-Action validator playground
-API integration examples
-📄 License
-MIT License - Feel free to use for your projects
+    <!-- License and Contributing -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="card bg-base-200 shadow-xl">
+        <div class="card-body">
+          <h2 class="card-title text-2xl text-primary mb-4">📜 License</h2>
+          <p class="mb-4">MIT License - Feel free to use for your projects</p>
+          <div class="card-actions">
+            <div class="badge badge-outline">Open Source</div>
+            <div class="badge badge-outline">MIT</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card bg-base-200 shadow-xl">
+        <div class="card-body">
+          <h2 class="card-title text-2xl text-primary mb-4">🤝 Contributing</h2>
+          <p class="mb-4">Contributions welcome! Please open an issue or submit a pull request.</p>
+          <div class="card-actions">
+            <a href="https://github.com/ldemestrevisaflow/aegis-demo/issues" class="btn btn-outline btn-primary btn-sm" target="_blank">Report Issue</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-🤝 Contributing
-Contributions welcome! Please open an issue or submit a pull request.
+    <!-- Contact Section -->
+    <div class="card bg-base-200 shadow-xl mt-8">
+      <div class="card-body">
+        <h2 class="card-title text-2xl text-primary mb-4">💬 Contact</h2>
+        <p class="mb-4">For questions about AEGIS implementation:</p>
+        <ul class="list-disc list-inside space-y-2">
+          <li>Open an issue in this repository</li>
+          <li>Visit the live demo for documentation</li>
+        </ul>
+        <div class="card-actions justify-end mt-4">
+          <a href="implementation.html" class="btn btn-primary">View Implementation Guide →</a>
+        </div>
+      </div>
+    </div>
 
-📧 Contact
-For questions about AEGIS implementation:
+  </div>
 
-Open an issue in this repository
-Visit the live demo for documentation
-Built for responsible AI deployment • AEGIS Framework © 2025
+  <!-- Footer -->
+  <footer class="footer footer-center p-10 bg-base-200 mt-12">
+    <div>
+      <p class="font-bold text-lg">AEGIS Framework</p> 
+      <p>AI Ethics, Governance & Integrity System</p>
+      <p class="text-sm opacity-60">Built for responsible AI deployment • AEGIS Framework © 2025</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
