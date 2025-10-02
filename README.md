@@ -6,7 +6,7 @@ A comprehensive framework for responsible AI development and deployment with rea
 
 ## 🚀 Live Demo
 
-Visit the live demo: `https://YOUR_USERNAME.github.io/aegis-demo/`
+Visit the live demo: `https://ldemestrevisaflow.github.io/aegis-demo/`
 
 ## 📋 Overview
 
