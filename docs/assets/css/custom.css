@@ -1,183 +1,111 @@
 /* AEGIS Custom Styles */
 
-:root {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-}
-
-/* Smooth transitions */
-* {
-  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: oklch(var(--b2));
-}
-
-::-webkit-scrollbar-thumb {
-  background: oklch(var(--p) / 0.5);
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: oklch(var(--p));
-}
-
-/* Code blocks */
-.mockup-code {
-  background: oklch(var(--b3));
-}
-
-.mockup-code pre {
-  padding: 1rem;
-}
-
-/* Cards hover effect */
-.card {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px -10px oklch(var(--p) / 0.3);
-}
-
-/* Navbar */
-.navbar {
-  backdrop-filter: blur(10px);
-  background: oklch(var(--b2) / 0.95);
-}
-
-/* Active menu item */
-.menu li a.active {
-  background: oklch(var(--p) / 0.2);
-  color: oklch(var(--pc));
-}
-
-/* Hero gradient */
+/* Additional custom styles for AEGIS demo */
 .hero {
   position: relative;
   overflow: hidden;
 }
 
-/* Alert animations */
-.alert {
-  animation: slideIn 0.3s ease;
+/* Enhanced card hover effects */
+.card:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease;
 }
 
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Progress bar styling */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  z-index: 9999;
+  transition: width 0.1s ease;
 }
 
-/* Badge pulse animation */
-.badge-primary {
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0%, 100% {
-    box-shadow: 0 0 0 0 oklch(var(--p) / 0.7);
-  }
-  50% {
-    box-shadow: 0 0 0 10px oklch(var(--p) / 0);
-  }
-}
-
-/* SVG animations */
-svg text {
-  text-rendering: optimizeLegibility;
-}
-
-svg rect, svg circle {
-  transition: all 0.3s ease;
-}
-
-svg rect:hover, svg circle:hover {
-  filter: brightness(1.2);
-}
-
-/* Collapse animations */
-.collapse-content {
-  transition: max-height 0.3s ease, padding 0.3s ease;
-}
-
-/* Tab transitions */
-.tab {
-  transition: all 0.2s ease;
-}
-
-.tab-active {
-  font-weight: 600;
-}
-
-/* Button effects */
+/* Ripple effect styles - already included in app.js but backup here */
 .btn {
-  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.btn:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 15px -5px oklch(var(--p) / 0.5);
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-.btn:active {
+::-webkit-scrollbar-track {
+  background: hsl(var(--b3));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--p));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--pf));
+}
+
+/* Smooth focus styles */
+.btn:focus,
+.tab:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid hsl(var(--p));
+  outline-offset: 2px;
+}
+
+/* Animation classes for cards */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
   transform: translateY(0);
 }
 
-/* Loading state */
-.skeleton {
-  animation: skeleton-loading 1.5s ease-in-out infinite;
+/* Code block styling enhancements */
+.mockup-code {
+  position: relative;
 }
 
-@keyframes skeleton-loading {
-  0%, 100% {
-    opacity: 0.3;
-  }
-  50% {
-    opacity: 0.6;
-  }
+.btn-copy {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  opacity: 0.7;
 }
 
-/* Responsive typography */
+.btn-copy:hover {
+  opacity: 1;
+}
+
+/* Mobile responsiveness helpers */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 2.5rem;
-  }
-  
-  h2 {
-    font-size: 2rem;
-  }
-  
   .hero-content {
     padding: 2rem 1rem;
   }
-}
-
-/* Print styles */
-@media print {
-  .navbar,
-  .footer,
-  .btn {
-    display: none;
+  
+  .text-6xl {
+    font-size: 3rem;
   }
   
-  .card {
-    break-inside: avoid;
+  .text-3xl {
+    font-size: 1.8rem;
   }
+}
 
+/* Dark mode enhancements */
+[data-theme="dark"] {
+  --scrollbar-track: hsl(var(--b3));
+  --scrollbar-thumb: hsl(var(--bc) / 0.3);
+}
+
+[data-theme="light"] {
+  --scrollbar-track: hsl(var(--b2));
+  --scrollbar-thumb: hsl(var(--bc) / 0.2);
+}
